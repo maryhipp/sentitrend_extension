@@ -1,0 +1,47 @@
+<html>
+    <head>
+      <style type="text/css">
+        body {
+          font-size: 10px;
+          min-width: 400px;
+        }
+
+        h1 {
+          font-size: 15px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        .bar.positive {
+          fill: green;
+        }
+
+        .bar.negative {
+          fill: red;
+        }
+
+        .axis text {
+          font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+      </style>
+      <script type="text/javascript" src="../vendors/jquery.min.js"></script>
+      <script type="text/javascript" src="../vendors/d3.min.js"></script>
+      <script type="text/javascript" src="popup.js"></script>
+    </head>
+    <body>
+      <h1>Senti-Trends</h1>
+      <h2></h2>
+      <button>Save this article!</button>
+      <ul></ul>
+      <div id="chart"></div>
+    </body>
+</html>

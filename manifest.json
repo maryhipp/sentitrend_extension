@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Senti-Trend",
+  "description": "This extension gathers data from URL and displays keywords with sentiment analysis.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Senti-Trend"
+  },
+
+  "background": {
+    "scripts": ["vendors/jquery.min.js","background.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+
+  "content_security_policy": "script-src 'self' https://access.alchemyapi.com/calls/url/URLGetRankedNamedEntities; object-src 'self'"
+
+  // "externally_connectable": {
+  //   "matches": ["http://localhost:3000"]
+  // }
+}
