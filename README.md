@@ -1,5 +1,4 @@
 #Senti-Trend Chrome Extension
-====================
 
 ##Overview
 
@@ -13,10 +12,10 @@ Senti-Trend is a pop-up Chrome Extension that displays the Sentiment Analysis da
 * Ruby on Rails
 
 ##User Stories
-*A user can click on extension icon to reveal a pop-up
-*A user can see data on the pop-up according to current tab they are viewing
-*A user can navigate between different tabs or windows and pop-up content will change dynamically
-*A user can see title of current page on pop-up
-*A user can see Entity Sentiment Analysis for up to 15 top entities of URL content
-*A user can see this Entity Sentiment Analysis displayed in D3 bar graph showing negative or positive sentiment score for each entity
-*A user cannot see Alchemy API key within extension source (need for an AJAX call to a [Rails back-end](github.com/maryhipp/sentitrend_server "Rails back-end"))
+* A user can click on extension icon to reveal a pop-up
+* A user can see data on the pop-up according to current tab they are viewing
+* A user can navigate between different tabs or windows and pop-up content will change dynamically
+* A user can see title of current page on pop-up
+* A user can see Entity Sentiment Analysis for up to 15 top entities of URL content
+* A user can see this Entity Sentiment Analysis displayed in D3 bar graph showing negative or positive sentiment score for each entity
+*A user cannot see Alchemy API key within extension source (need for an AJAX call to a [Rails back-end](http://github.com/maryhipp/sentitrend_server "Rails back-end"))
