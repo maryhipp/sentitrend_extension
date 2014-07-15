@@ -10,8 +10,8 @@ chrome.runtime.getBackgroundPage(function(backgroundPage) {
   var dataset = sentimentArray;
 
   var margin = {top: 30, right: 10, bottom: 10, left: 10},
-    width = 400 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 600,
+    height = 400;
 
   var x = d3.scale.linear()
     .domain(d3.extent(dataset, function(d) { return d.score; })).nice()
@@ -42,16 +42,17 @@ chrome.runtime.getBackgroundPage(function(backgroundPage) {
     .attr("height", y.rangeBand());
 
   svg.selectAll("text")
-   .data(dataset)
-   .enter()
-   .append("text")
-   .text(function(d) {
+    .data(dataset)
+    .enter()
+    .append("text")
+    .text(function(d) {
         return d.entity;
    })
-   .attr("x", function(d) { return x(Math.min(0, d.score)); })
-   .attr("y", function(d) { return y(d.entity); })
-   .attr("text-anchor", "start")
-   .attr("dy", "12");
+    .attr("x", function(d) { return x(Math.min(0, d.score)); })
+    .attr("y", function(d) { return y(d.entity); })
+    .attr("text-anchor", "start")
+    .attr("dy", "13")
+    .attr("dx", "5");
 
   svg.append("g")
     .attr("class", "x axis")

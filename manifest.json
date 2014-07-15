@@ -6,8 +6,13 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "icons/small_icon.png",
     "default_title": "Senti-Trend"
+  },
+
+  "icons" : {
+    "128": "icons/small_icon.png",
+    "48": "icons/large_icon.png"
   },
 
   "background": {
@@ -23,8 +28,4 @@
   ],
 
   "content_security_policy": "script-src 'self' https://access.alchemyapi.com/calls/url/URLGetRankedNamedEntities; object-src 'self'"
-
-  // "externally_connectable": {
-  //   "matches": ["http://localhost:3000"]
-  // }
 }

@@ -4,12 +4,13 @@ var sentimentArray;
 var currentTab;
 console.log("background is running");
 
-// Icon is clicked and triggers content script which returns url & title for popup
+// Icon is clicked and triggers content script to be injected into current tab
 chrome.browserAction.onClicked.addListener(function(tab) {
   getCurrentTab();
   chrome.tabs.executeScript(null, { file: 'inject.js' });
 });
 
+// Injected script returns URL & title and triggers API call and pop-up
 chrome.runtime.onMessage.addListener(function (request) {
 
   console.log("request is " + request.title)
@@ -22,8 +23,6 @@ chrome.runtime.onMessage.addListener(function (request) {
   });
 
 });
-
-
 
 // query for current tab so content changes between tab switch
 function getCurrentTab() {
@@ -46,7 +45,7 @@ function getAlchemyInfo(url) {
     sentimentArray = [];
     for(var i =0; i < response.results.entities.entity.length; i++) {
       sentimentArray.push({
-        entity: response.results.entities.entity[i].text,
+        entity: response.results.entities.entity[i].text.toUpperCase(),
         score: parseFloat(response.results.entities.entity[i].sentiment.score) || 0
       });
     }
