@@ -19,3 +19,8 @@ Senti-Trend is a pop-up Chrome Extension that displays the Sentiment Analysis da
 * A user can see Entity Sentiment Analysis for up to 15 top entities of URL content
 * A user can see this Entity Sentiment Analysis displayed in D3 bar graph showing negative or positive sentiment score for each entity
 *A user cannot see Alchemy API key within extension source (need for an AJAX call to a [Rails back-end](http://github.com/maryhipp/sentitrend_server "Rails back-end"))
+
+##Screenshots
+
+!(example1.png)
+!(example2.png)
