@@ -20,7 +20,7 @@
 * A user can see this Entity Sentiment Analysis displayed in D3 bar graph showing negative or positive sentiment score for each entity
 * A user cannot see Alchemy API key within extension source (need for an AJAX call to a [Rails back-end](http://github.com/maryhipp/sentitrend_server "Rails back-end"))
 
-##Screenshot Examples
+##Sample Analysis
 
 ![Example 1](./README/alistapart.png)
 
