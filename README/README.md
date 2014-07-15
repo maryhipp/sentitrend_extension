@@ -24,3 +24,4 @@ Senti-Trend is a pop-up Chrome Extension that displays the Sentiment Analysis da
 
 ![Example 1](./example1.png)
 ![Example 2](./example2.png)
+
