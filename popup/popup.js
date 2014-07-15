@@ -31,7 +31,7 @@ chrome.runtime.getBackgroundPage(function(backgroundPage) {
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-
+  // renders bars on graph
   svg.selectAll(".bar")
     .data(dataset)
     .enter().append("rect")
@@ -41,12 +41,13 @@ chrome.runtime.getBackgroundPage(function(backgroundPage) {
     .attr("width", function(d) { return Math.abs(x(d.score) - x(0)); })
     .attr("height", y.rangeBand());
 
+  // renders text on graph
   svg.selectAll("text")
     .data(dataset)
     .enter()
     .append("text")
     .text(function(d) {
-        return d.entity;
+        return d.entity + ': ' + d.score;
    })
     .attr("x", function(d) { return x(Math.min(0, d.score)); })
     .attr("y", function(d) { return y(d.entity); })

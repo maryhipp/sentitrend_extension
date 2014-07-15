@@ -2,8 +2,9 @@
   "manifest_version": 2,
 
   "name": "Senti-Trend",
+  "short_name": "See a website's sentiments at-a-glance.",
   "description": "This extension gathers data from URL and displays keywords with sentiment analysis.",
-  "version": "1.0",
+  "version": "3.0",
 
   "browser_action": {
     "default_icon": "icons/small_icon.png",
