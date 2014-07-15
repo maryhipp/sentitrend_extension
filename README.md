@@ -2,7 +2,7 @@
 
 ##Overview
 
-Senti-Trend is a pop-up Chrome Extension that displays the Sentiment Analysis data for the main topics within the webpage being viewed. It was designed as an analysis tool for articles specifically, but will reveal data for any URL you visit containing "entities" as defined by the Alchemy API. Senti-Trend was developed over a 5-day sprint as my final project for General Assembly's WDI program, and was inspired by [Trend 365](https://github.com/ab75173/trend365 "Trend 365"), an earlier group project.
+[Senti-Trend](https://chrome.google.com/webstore/detail/senti-trend/mpiibijblggpgpoddialioodnlbgongg "Senti-Trend") is a pop-up Chrome Extension that displays the Sentiment Analysis data for the main topics within the webpage being viewed. It was designed as an analysis tool for articles specifically, but will reveal data for any URL you visit containing "entities" as defined by the Alchemy API. Senti-Trend was developed over a 5-day sprint as my final project for General Assembly's WDI program, and was inspired by [Trend 365](https://github.com/ab75173/trend365 "Trend 365"), an earlier group project.
 
 ##Technologies Used
 * Google Chrome Extension API's
@@ -23,5 +23,8 @@ Senti-Trend is a pop-up Chrome Extension that displays the Sentiment Analysis da
 ##Screenshot Examples
 
 ![Example 1](./README/example1.png)
-![Example 2](./README/example2.png)
+
+##Production
+
+[Download it from the Chrome Web Store](https://chrome.google.com/webstore/detail/senti-trend/mpiibijblggpgpoddialioodnlbgongg "Download it from the Chrome Web Store") to see Senti-Trend in action!
 
