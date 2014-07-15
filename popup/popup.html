@@ -2,24 +2,34 @@
     <head>
       <style type="text/css">
         body {
+          background-image:url(sepia.jpg);
+          border: 2px solid black;
           font-size: 10px;
+          font-weight: bold;
           min-width: 400px;
+          padding: 5px;
         }
 
         h1 {
           font-size: 15px;
+          margin:0;
         }
 
         h2 {
           font-size: 20px;
+          margin-top: 0px;
         }
 
         .bar.positive {
-          fill: green;
+          fill: lightgreen;
         }
 
         .bar.negative {
-          fill: red;
+          fill: #D66565;
+        }
+
+        .bar:hover {
+          fill: lightblue;
         }
 
         .axis text {
@@ -40,7 +50,6 @@
     <body>
       <h1>Senti-Trends</h1>
       <h2></h2>
-      <button>Save this article!</button>
       <ul></ul>
       <div id="chart"></div>
     </body>

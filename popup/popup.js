@@ -5,22 +5,6 @@ chrome.runtime.getBackgroundPage(function(backgroundPage) {
   $('h2').text(backgroundPage.title)
   var html = '';
   sentimentArray = backgroundPage.sentimentArray
-  // for (var i = 0; i < sentimentArray.length; i++) {
-  //   html += '<li>' + sentimentArray[i].entity + ' : ' + (sentimentArray[i].score) + '</li>';
-  // }
-  // $('ul').html(html);
-
-  // Send article to database when button is clicked
-  // $('button').click( function() {
-  //   //get the url
-  //   var url = backgroundPage.url;
-  //   //send the url to your server
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "localhost:3000/links",
-  //     data: "url=" + url
-  //  });
-  // });
 
   // D3
   var dataset = sentimentArray;
@@ -47,6 +31,7 @@ chrome.runtime.getBackgroundPage(function(backgroundPage) {
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+
   svg.selectAll(".bar")
     .data(dataset)
     .enter().append("rect")
@@ -65,7 +50,8 @@ chrome.runtime.getBackgroundPage(function(backgroundPage) {
    })
    .attr("x", function(d) { return x(Math.min(0, d.score)); })
    .attr("y", function(d) { return y(d.entity); })
-   .attr("text-anchor", "start");
+   .attr("text-anchor", "start")
+   .attr("dy", "12");
 
   svg.append("g")
     .attr("class", "x axis")

@@ -12,13 +12,14 @@
 
   "background": {
     "scripts": ["vendors/jquery.min.js","background.js"],
-    "persistent": false
+    "persistent": true
   },
 
   "permissions": [
     "tabs",
     "http://*/",
-    "https://*/"
+    "https://*/",
+    "storage"
   ],
 
   "content_security_policy": "script-src 'self' https://access.alchemyapi.com/calls/url/URLGetRankedNamedEntities; object-src 'self'"

@@ -8,15 +8,22 @@ console.log("background is running");
 chrome.browserAction.onClicked.addListener(function(tab) {
   getCurrentTab();
   chrome.tabs.executeScript(null, { file: 'inject.js' });
-
-  chrome.runtime.onMessage.addListener(function(request) {
-    console.log("request is " + request.title)
-    title = request.title;
-    url = request.url;
-    getAlchemyInfo(url);
-    chrome.browserAction.setPopup({tabId: currentTab, popup: 'popup/popup.html'});
-  });
 });
+
+chrome.runtime.onMessage.addListener(function (request) {
+
+  console.log("request is " + request.title)
+  title = request.title;
+  url = request.url;
+  getAlchemyInfo(url).then(function() {
+    console.log("second then")
+    chrome.browserAction.setPopup({tabId: currentTab, popup: 'popup/popup.html'});
+    // chrome.extension.onClicked.removeListener();
+  });
+
+});
+
+
 
 // query for current tab so content changes between tab switch
 function getCurrentTab() {
@@ -30,7 +37,7 @@ function getCurrentTab() {
 // AJAX call to Alchemy API to extract entities & sentiment analysis from URL content
 function getAlchemyInfo(url) {
   url = encodeURIComponent(url);
-  $.ajax({
+  return $.ajax({
     type: 'get',
     url: "https://enigmatic-dawn-5549.herokuapp.com/analyze?url=" + url,
     dataType: 'json'
@@ -43,7 +50,6 @@ function getAlchemyInfo(url) {
         score: parseFloat(response.results.entities.entity[i].sentiment.score) || 0
       });
     }
-    return sentimentArray;
   });
 }
 
